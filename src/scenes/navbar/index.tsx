@@ -22,6 +22,8 @@ export const Navbar = ({
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
   const navbarBackground = isTopOfPage ? '' : 'bg-primary-100 drop-shadow'
 
+  const closeMenu = () => setIsMenuToggled(false)
+
   return (
     <nav>
       <div
@@ -93,21 +95,25 @@ export const Navbar = ({
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={closeMenu}
             />
             <Link
-              page="About"
+              page="Benefits"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={closeMenu}
             />
             <Link
               page="Our Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={closeMenu}
             />
             <Link
               page="Contact Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              onClick={closeMenu}
             />
           </div>
         </div>
